@@ -1,45 +1,31 @@
 
-import { useState } from 'react';
+// import { useState } from 'react';
 import './App.css'
-
+import React from 'react';
+import Card from './components/card';
 function App() {
-// let counter =10;
 
-const [counter , setCounter]=useState(10)
 
-const addvalue=() =>{
-
-  if(counter < 20){
-setCounter(counter+1)
-  console.log("Button clciked",Math.random());
-}
-else{
-  console.log("maxium value reached");
-  
-}
+  let example ={
+    username:"Ankit",
+    age:"23"
   }
-  
-const removevalue =()=>{
-  if(counter >0){
-  setCounter(counter-1)
-
-  }
-  else{
-    console.log("Value cannot be negaative");
-    
-  }
-}
 
 
   return (
     <>
-  <h1>Welcome to react learning</h1>
-  <h2>Counter Value:{counter}</h2>
-  <button onClick={addvalue}>Add Value</button>
-  <br/>
-  <button onClick={removevalue}>Remove Value</button>
+  {
+
+  <><h1 className=' text-black p-4 bg-amber-700 rounded-2xl'>Tailwind  test</h1>
+       <Card channel ="Hello World" obj = {example} />
+        <Card />
+
+        </>
+  }
+
     </>
   )
 }
 
-export default App
+export default App;
+export {Card}
